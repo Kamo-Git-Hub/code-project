@@ -1,0 +1,97 @@
+<nav class="nav-wraper nav-bar">
+  <div class="container-fluid title">
+    <a href="/" class="brand-logo"><img class="logo" src="/img/screenshot-studio-removebg-preview.png" alt="logo"></a>
+    <a href="#" class="sidenav-trigger" data-target="mobile-links">
+
+      <i class="material-icons">menu</i>
+    </a>
+    <ul class="right hide-on-med-and-down">
+
+
+       
+      {{#if isAdmin}}
+      <li><a href="/admin" target="_blank">Админ</a></li>
+      {{/if}}
+
+
+      {{#if isHome}}
+      <li class="active"><a href="/">Главная</a></li>
+      {{else}}
+      <li><a href="/">Главная</a></li>
+      {{/if}}
+      {{#if isAuth}}
+      {{#if isProfile}}
+      <li class="active"><a href="/profile">Профиль</a></li>
+      {{else}}
+      <li><a href="/profile">Профиль</a></li>
+      {{/if}}
+      {{/if}}
+
+      {{#if isTape}}
+      <li class="active"><a href="/tape">Лента</a></li>
+      {{else}}
+      <li><a href="/tape">Лента</a></li>
+      {{/if}}
+
+      {{#if isUser}}
+      <li class="active"><a href="/users">Пользователи</a></li>
+      {{else}}
+      <li><a href="/users">Пользователи</a></li>
+      {{/if}}
+
+       {{#if isPost}}
+      <li class="active"><a href="/help-posts/post">Спроси</a></li>
+      {{else}}
+      <li><a href="/help-posts/post">Спроси</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+
+      {{#if isAdd}}
+      <li class="active"><a href="/add">Поделится</a></li>
+      {{else}}
+      <li><a href="/add">Поделится</a></li>
+      {{/if}}
+      <li><a href="/auth/logaut">Выйти</a></li>
+      {{else}}
+      {{#if isLogin}}
+      <li class="active"><a class="log-in-auth" href="/auth/login">Войти</a></li>
+      {{else}}
+      <li><a class="log-in-auth" href="/auth/login">Войти</a></li>
+      {{/if}}
+
+      {{/if}}
+
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Курсы<i
+            class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+<center class="time-backgraund">
+
+
+
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a href="/courses/html">HTML</a></li>
+  <li><a href="/courses/css">Css</a></li>
+  <li><a href="/courses/javascript">JavaScript</a></li>
+  <li><a href="/courses/php">PHP</a></li>
+</ul>
+
+
+<ul class="sidenav blue" id="mobile-links">
+  <li><a href="/home">Главная</a></li>
+  <li><a href="/tape">Лента</a></li>
+  <li><a href="/add">Поделится</a></li>
+  <li><a class="log-in-auth" href="#">Вход</a></li>
+  <hr>
+  <center>
+    <ul>
+      <li><a href="/html">HTML</a></li>
+      <li><a href="/css">Css</a></li>
+      <li><a href="/javascript">JavaScript</a></li>
+    </ul>
+  </center>
+</ul>

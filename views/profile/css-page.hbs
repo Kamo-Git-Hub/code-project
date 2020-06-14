@@ -1,0 +1,41 @@
+
+
+{{#if css.length}}
+
+
+{{#each css}}
+
+<h3 class="title">
+{{title}}
+</h3>
+<div class="user-course-page">
+<div class="course-content">
+{{content}}
+</div>
+<textarea disabled class="course-code-to-profile">{{code}}</textarea>
+<form action="/profile/remove-css" method="post">
+<input type="hidden" name="id" value="{{_id}}">
+        <button class="btn" type="submit">удалить</button>
+</form>
+   <hr>
+</div>
+{{/each}}
+
+
+{{else}}
+
+
+<div class="profile-page-message">
+
+        <center>
+                <img class="folder-img" src="/img/folder.png" alt="folder">
+        </center>
+          
+        <p>
+        Уважаемый пользователь, данная папка пуста. Здесь вы можете хранить интересующие вам темы из курсов,
+         так же удалять их после изучения. Для добавления 
+        перейдите к разделу <a href="/courses/css">курсов</a>,  из папки <b>{{title}}</b>, выберите тему и нажмите на кнопку "добавить к себе"
+        </p>
+     
+</div>
+{{/if}}

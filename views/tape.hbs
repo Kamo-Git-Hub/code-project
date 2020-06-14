@@ -1,0 +1,33 @@
+{{#each tape}}
+<div>
+    <div class="tape-options">
+        <strong >
+             <i class="material-icons">title</i>  
+            <span>{{title}}</span>
+            {{#if @root.isAuth}}
+             <i class="material-icons">person</i> 
+            <span><a href="#">{{userId.name}}</a></span>
+            {{/if}}
+            <i class="material-icons">access_time</i> 
+            <span>{{date}}</span>
+        </strong>
+    </div>
+
+    
+     
+        <textarea class="content-text" disabled>{{content}}</textarea> 
+        <span class="tape-items">
+      {{#ifeq userId._id  @root.userId}}
+          <a href="/tape/{{_id}}/edit?mail=true">Изменить</a>
+    {{/ifeq}}
+    {{#if @root.isAuth}}
+    <form method="POST" action="/profile/add/tape">
+        <input type="hidden" name="id" value="{{_id}}">
+          <button type="submit" class="btn blue">Добавить к себе</button>
+    </form>
+    {{/if}}   
+      </span>
+  
+  
+</div>
+{{/each}}

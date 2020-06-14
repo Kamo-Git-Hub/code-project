@@ -1,0 +1,16 @@
+<h3 class="title">
+{{php.title}}
+</h3>
+
+<div class="course-content">
+{{php.content}}
+</div>
+<textarea disabled class="course-code">{{php.code}}</textarea>
+{{#if isAdmin}}
+
+<a href="/admin/{{php._id}}/edit-php?mail===true">изменить</a>
+
+{{/if}}
+<form action="/profile/php" method="post">
+<input type="hidden" name="id" value="{{php._id}}">
+<button type="submit" class="btn">добавить к себе</button>

@@ -1,0 +1,15 @@
+<h3 class="title">
+{{js.title}}
+</h3>
+
+<div class="course-content">
+{{js.content}}
+</div>
+
+<textarea disabled class="course-code">{{js.code}}</textarea>
+{{#if isAdmin}}
+<a href="/admin/{{js._id}}/edit-js?mail===true">изменить</a>
+{{/if}}
+<form action="/profile/javascript" method="post">
+<input type="hidden" name="id" value="{{js._id}}">
+<button type="submit" class="btn">добавить к себе</button>

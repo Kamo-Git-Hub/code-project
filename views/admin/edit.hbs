@@ -1,0 +1,121 @@
+<h1>Admin</h1>
+
+
+
+<hr>
+    <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#html">html</a></li>
+        <li class="tab col s3"><a  href="#css">css</a></li>
+        <li class="tab col s3 "><a href="#javascript">javascript</a></li>
+        <li class="tab col s3"><a href="#php">php</a></li>
+        
+      </ul>
+    </div>
+    <div id="html" class="col s12">
+        {{!-- HTML --}}
+
+<h1>HTML</h1>
+
+
+<form action="/admin/html-edit" method="post">
+
+         <div class="input-field col s12">
+          <p>title</p>   <input  type="text" name="title" placeholder="title" value="{{html.title}}" required>
+         <p>description</p> <textarea  class="materialize-textarea" name="content" required >{{html.content}}</textarea>
+         <p>code</p> <textarea  class="materialize-textarea" name="code" required>{{html.code}}</textarea>
+        </div>
+                    <input type="hidden" name="id" value="{{html._id}}">
+                        <button type="submit" class="btn">отправить изменения</button>
+    </div>
+</form>
+ {{!-- HTML --}}
+
+{{!-- =============================================================================================== --}}
+
+
+
+
+{{!-- =============================================================================================== --}}
+ {{!-- CSS --}}
+    <div id="css" class="col s12">
+
+<h1>CSS</h1>
+
+
+<form action="/admin/css-edit" method="post">
+
+         <div class="input-field col s12">
+          <p>title</p>   <input  type="text" name="title" placeholder="title" value="{{css.title}}" required>
+         <p>description</p> <textarea  class="materialize-textarea" name="content" required >{{css.content}}</textarea>
+         <p>code</p> <textarea  class="materialize-textarea" name="code" required>{{css.code}}</textarea>
+        </div>
+         <input type="hidden" name="id" value="{{css._id}}">
+                        <button type="submit" class="btn">отправить изменения</button>
+    </div>
+</form>
+
+    </div>
+
+{{!-- CSS --}}
+
+
+
+{{!-- =============================================================================================== --}}
+
+
+{{!-- JS --}}
+    <div id="javascript" class="col s12">
+        <h1>javascript</h1>
+
+        <form action="/admin/js-edit" method="post">
+
+         <div class="input-field col s12">
+          <p>title</p>   <input  type="text" name="title" placeholder="title" value="{{js.title}}" required>
+         <p>description</p> <textarea  class="materialize-textarea" name="content" required >"{{js.content}}" </textarea>
+         <p>code</p> <textarea  class="materialize-textarea" name="code" required>"{{js.code}}" </textarea>
+        </div>
+                        <input type="hidden" name="id" value="{{js._id}}">
+                        <button type="submit" class="btn">отправить изменения</button>
+    </div>
+</form>
+
+    </div>
+
+    </div>
+
+{{!-- JS --}}
+    
+
+
+
+{{!-- =============================================================================================== --}}
+
+{{!-- PHP --}}
+
+    <div id="php" class="col s12">
+        <h1>PHP</h1>
+
+        <form action="/admin/php-edit" method="post">
+
+         <div class="input-field col s12">
+          <p>title</p>   <input  type="text" name="title" placeholder="title" value="{{php.title}}" required>
+         <p>description</p> <textarea  class="materialize-textarea" name="content" required >{{php.content}}</textarea>
+         <p>code</p> <textarea  class="materialize-textarea" name="code" required>{{php.code}}</textarea>
+        </div>
+                        <input type="hidden" name="id" value="{{php._id}}">
+                        <button type="submit" class="btn">отправить изменения</button>
+        </div>
+                        </form>
+    </div>
+
+    </div>
+
+    {{!-- PHP --}}
+    
+{{!-- =============================================================================================== --}}
+
+
+
+  </div> 

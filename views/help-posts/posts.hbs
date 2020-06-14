@@ -1,0 +1,47 @@
+ {{#if isAuth}}
+<form action="/help-posts/post" method="POST">
+ 
+ <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input id="input_text" name="title" type="text" data-length="50" required>
+            <label for="input_text">Наименование</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea" name="content" class="materialize-textarea" required></textarea>
+            
+            <label for="textarea">Тема</label>
+          </div>
+        </div>
+
+    
+        <button class="btn red" type="submit">спросить</button>
+      </div>
+    </div>
+ 
+ </form>
+ {{else}}
+<p class="post-info">
+Чтобы задать вопрос в общий чат вам необходимо зарегестрироватся, 
+но вы можете просмотреть вапросы других пользователей, наверняка вы найдете 
+там что-то интересное для вас
+
+</p>
+ {{/if}}
+
+
+<div class="row ">
+   {{#each post}}
+   <a href="/help-posts/post/{{_id}}">
+  <span class="col s3 bord border-position">
+    <span class="cuestions">
+      <img src="https://img.icons8.com/ios/50/000000/question.png"/>
+  <p>{{title}}</p>
+</span>
+  </span>
+  </a>
+   {{/each}}
+</div>

@@ -1,0 +1,18 @@
+
+<h3 class="title">
+{{html.title}}
+</h3>
+
+<div class="course-content">
+{{html.content}}
+</div>
+
+<textarea disabled class="course-code">{{html.code}}</textarea>
+{{#if isAdmin}}
+<a href="/admin/{{html._id}}/edit-html?mail===true">изменить</a>
+{{/if}}
+<form action="/profile/add-html" method="post">
+<input type="hidden" name="id" value="{{html._id}}">
+<button type="submit" class="btn">добавить к себе</button>
+
+</form>

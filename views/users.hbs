@@ -1,0 +1,31 @@
+
+<div class="row">
+  
+{{#each  user}}
+<div class="col s3">
+    <div class="all-users-page">
+{{#if avatarUrl}}
+
+<img src="{{avatarUrl}}" alt="user photo" class="all-users-photos"/>
+
+{{else}}
+
+{{#if male}}
+<img src="/img/male.png" alt="user photo" class="all-users-photos"/>
+{{else}}
+
+<img src="/img/female.png" alt="user photo" class="all-users-photos"/>
+{{/if}}
+
+
+{{/if}}
+<div class="userName">
+<a href="/users/user-profile/{{_id}}">{{name}}</a>
+</div>
+</div>
+</div>
+
+{{/each}}
+
+
+</div>

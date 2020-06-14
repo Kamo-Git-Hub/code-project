@@ -1,0 +1,55 @@
+   
+<h5 class="question-title"> 
+    <span><span>От:</span><span><a href="/users/user-profile/{{post.url}}">{{post.owner}}</a></span></span>
+    <center>
+        {{post.title}}
+    </center>
+ 
+</h5>
+<textarea class="content-post-title" disabled>{{post.content}}</textarea> 
+
+{{#if isAuth}}
+<form class="comment" id="{{post._id}}">
+
+  <div class="input-field col s12">
+            <textarea  oninput="undisabled()" id="cometn-value" name="content" 
+            class="comment-text" ></textarea>
+            
+          </div>
+
+
+<button class="btn send" disabled>ответить</button>
+
+<div class="comment-page">
+    
+   {{/if}} 
+          
+         <div class="tbody-comment">
+            {{#each comment}}
+           
+                 <div class="content-post-coment">
+                     <p class="autor">Автор:
+                         <a href="/users/user-profile/{{owner}}">{{username}}</a>
+                     </p>
+                     {{data}}
+                     <p>
+                         {{body}}
+                     </p>
+                 </div>
+             {{/each}}
+         </div>
+   
+    
+       
+    
+ 
+
+</div>
+
+
+</form>
+
+
+
+
+

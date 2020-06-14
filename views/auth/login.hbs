@@ -1,0 +1,115 @@
+
+
+<div class="row">
+    <div class="col s6 offset-s3">
+      <ul class="tabs">
+        <li class="tab col s6 blue"><a class="active"  href="#login"><b class="login-title">Войти на сайт</b></a></li>
+        <li class="tab col s6 blue"><a href="#register"><b class="login-title">Зарегестрироватся</b></a></li>
+
+      </ul>
+    </div>
+    <div id="login" class="col s6 offset-s3">
+
+<span class="some-errors">
+  {{#if error}}
+  <span> <i class="material-icons">error_outline</i> 
+  {{error}}
+  <i class="material-icons">error_outline</i> 
+  </span>
+
+{{/if}}
+</span>
+
+<form action="/auth/login" method="post">
+
+  <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email" required>
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="обязательное поле" data-success="готово">введите email</span>
+        </div>
+
+    <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="password" required>
+          <label for="password">Пароль</label>
+          <span class="helper-text" data-error="обязательное поле" data-success="готово">введите пароль</span>
+                  
+        </div>
+               
+                    <center>
+                      <a href="/auth/reset">Забыли пароль?</a>
+                    </center>
+              
+        <button class="btn red auth-btn" type="submit">Войти</button>
+
+
+</form>
+
+
+
+
+    </div>
+    <div id="register" class="col s6 offset-s3">
+
+<span class="some-errors">
+  {{#if error}}
+   <span> <i class="material-icons">error_outline</i> 
+  {{error}}
+  <i class="material-icons">error_outline</i> 
+  </span>
+
+{{/if}}
+
+
+     
+
+        <form action="/auth/register" method="post" novalidate>
+
+  <div class="input-field col s12">
+          <input id="remail" type="email" class="validate" name="email" required>
+          <label for="remail">Email</label>
+          <span class="helper-text" data-error="обязательное поле" data-success="готово">введите email</span>
+        </div>
+
+    <div class="input-field col s12">
+          <input id="rpassword" type="password" class="validate" name="password" required>
+          <label for="rpassword">Пароль</label>
+          <span class="helper-text" data-error="обязательное поле" data-success="готово">введите пароль</span>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="confirm" type="password" class="validate" name="confirm" required>
+          <label for="confirm">Проверка пароли</label>
+          <span class="helper-text" data-error="обязательное поле" data-success="готово">повторите пароль</span>
+        </div> 
+
+         <div class="input-field col s12">
+          <input id="name" type="text" class="validate" name="name" required>
+          <label for="name">Имя</label>
+          <span class="helper-text" data-error="обязательное поле" data-success="готово">введите ваше имя</span>
+        </div>
+
+  <b>Выберите пол</b>
+  <strong class="sex">
+       <p>
+      <label>
+        <input name="female" onclick="checkSex()"  type="checkbox" id="male" />
+        <span>женский</span>
+      </label>
+    </p>
+
+      <p>
+      <label>
+        <input name="male" onclick="checkSex()" type="checkbox" id="female" />
+        <span>мужской</span>
+      </label>
+    </p>
+   </strong>      
+        <button class="btn red auth-btn" type="submit">зарегестрироватся</button>
+
+
+</form>
+
+
+    </div>
+    
+ 

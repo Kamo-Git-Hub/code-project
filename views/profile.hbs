@@ -1,0 +1,168 @@
+<div class="row">
+  <div class="col s4">
+    {{#if user.avatarUrl}}
+    <img class="prifile-avatar" src="{{user.avatarUrl}}" alt="avatar-{{user.name}}">
+    {{else}}
+     {{#if user.male}}
+  <img class="prifile-avatar" src="/img/male.png" alt="avatar" >
+  {{else}}
+<img class="prifile-avatar" src="/img/female.png" alt="avatar" >
+    {{/if}}
+    {{/if}}
+
+  </div>
+  <div class="col s8">
+
+    <div class="card profile-pageandsetting">
+
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          
+         <strong> <span class="profile-name-title">Имя:</span ><span class="profile-name-title-des">
+           {{user.name}}</span><i class="material-icons right">settings</i></strong>
+           
+        <div>
+           <strong><b>GitHub:</b><a href="{{user.github}}">ссылка</a></strong>
+        </div>
+
+        <div>
+           <strong><b>Я в соц сетях:</b><a href="{{user.socialNetwork}}">ссылка</a></strong>
+        </div>
+
+        </span>
+      </div>
+      <div class="card-reveal blue">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+        <form action="/profile" method="post" enctype="multipart/form-data">
+
+          <p>электронная почта: <strong>{{user.email}}</strong> </p>
+          <input id="name" type="text" class="validate"
+             placeholder="Имя" 
+           name="name" required value="{{user.name}}">
+          <span class="helper-text" data-error="Поле имени является обязательным" data-success="right"></span>
+          <input id="name" type="text" class="validate" 
+        placeholder="github link"  name="github"  value="{{user.github}}">
+          <input id="name" type="text" class="validate"
+          placeholder="Ссылка на вашу страницу в соц. сетях"
+           name="socialNetwork" value="{{user.socialNetwork}}">
+          <div class="input-field col s12">
+
+            <label for="name"></label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+          </div>
+
+
+
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Аватар</span>
+              <input type="file" name="avatar">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+
+
+          <button type="submit" class="btn">сохранить изменения</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{{!-- pages --}}
+
+
+
+<div class="row">
+
+  <div class="col s4">
+    <strong>
+      <span><i class="material-icons">folder</i></span>
+      <a href="/profile/html-page">HTML</a>
+    </strong>
+
+<br>
+   
+    <strong>
+      <span><i class="material-icons">folder</i></span>
+      <a href="/profile/php-page">PHP</a>
+    </strong>
+
+
+  </div>
+
+
+  <div class="col s4">
+    <strong>
+      <span><i class="material-icons">folder</i></span>
+      <a href="/profile/css-page">Css</a>
+    </strong>
+    <br>
+     <strong>
+      <span><i class="material-icons">folder</i></span>
+      <a href="#">Node JS</a>
+    </strong>
+  </div>
+
+
+  <div class="col s4">
+    <strong>
+      <span><i class="material-icons">folder</i></span>
+      <a href="/profile/js-page">JavaScript</a>
+    </strong>
+    <br>
+     <strong>
+      <span><i class="material-icons">folder</i></span>
+      <a href="#">Pyton</a>
+    </strong>
+  </div>
+
+
+</div>
+
+
+<div>
+  {{#if items.length}}
+  {{#each items}}
+  
+
+  <p class="tape-title-for-profile">{{title}}</p>
+<textarea class="content-text-from-profile" disabled>{{content}}</textarea> 
+
+<form action="/profile/remove/tape-item" method="post">
+  <input type="hidden" name="id" value="{{_id}}">
+  <button type="submit" class="btn">удалить</button>
+</form>
+ {{/each}}
+  {{else}}
+  <div class="row">
+
+<div class="col s6">
+  <img class="profile-pate-photo" src="/img/tape.png" alt="tape" />
+</div>
+<div class="col s6">
+   <p class="profile-tape-info">
+        Уважаемый пользователь, ваша лента пуста. Здесь вы можете хранить интересующие вам темы из раздела
+        <a href="/tape">Лента</a>,
+         так же удалять их. Для добавления 
+        перейдите к разделу <a href="/tape">Лента</a>,   выберите интересующию вам новость и нажмите на кнопку "сохранить".
+        
+        </p>
+        <p class="profile-tape-helper-text">
+          Так же не забудьте активно пользоваться добавлением новых тем в ленту, таким образом вы можете быть полезны каму то.
+Добавлять можно какие нибудь фишки или новости из сферы программирования, так же разные коды и ссылки на ваши работы
+        </p>
+</div>
+  </div>
+
+  {{/if}}
+  
+ 
+  
+
+   </div>

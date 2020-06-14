@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+
+
+body{
+    /* background-color: #ccc9c3; */
+    background-image: radial-gradient(circle 675px at center, #d9dadb 0%, #a1c7f1 100%);
+
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.new-class{
+    background-color: black;
+}
+
+.all{
+    background-image: radial-gradient(circle 675px at center, #ffffff 0%, #ccdef0 100%);
+
+    
+    border-radius: 5px;
+    width: 1100px;
+    padding:0 20px 0 20px;
+    border: 0.5px solid rgb(161, 160, 160);
+    font-size: 16px;
+    line-height: 2rem;
+    color: rgb(54, 53, 53);
+    min-height: 430px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    
+
+}
+.active{
+    background-color:  #0a6f91!important;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-style: unset;
+   
+}
+/* error-page */
+
+.error-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-bar{
+    background-color: #35a0c4;
+}
+
+.error-num{
+    font-size: 120px;
+    color: red;
+    margin: 10px;
+}
+
+.error-text{
+    font-size: 22px;
+    color: red;
+    margin: 10px;
+}
+.error-message{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* home */
+
+.home-photo{
+    width: 500px;
+    height: 570px;
+    display: flex;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+}
+
+.home-text{
+
+    padding: 20px;
+    margin: 10px 0 10px 0;
+    line-height:26px;
+    word-spacing: 9px;
+    color: rgb(80, 78, 78);
+    border-radius: 5px;
+    background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+    
+}
+
+
+/* error-page */
+
+.title{
+padding-left: 40px;
+padding-right: 40px;
+}
+
+
+.logo{
+    width: 200px;
+}
+
+
+
+
+
+.log-in-auth{
+  
+    font-weight: bold;
+  
+  }
+
+  .sex{
+      display: flex;
+  }
+
+  .sex p{
+      padding: 5px 20px 5px;
+  }
+
+  .auth-btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+  #login{
+      margin-top: 100px;
+      background-color: whitesmoke !important;
+      position: relative; bottom: 20px;
+  }
+
+  .login-title{
+      color: black;
+  }
+
+  #register{
+    margin-top: 100px;
+    background-color: whitesmoke !important;
+    position: relative; bottom: 20px;
+  }
+  
+.content-text{
+    font-weight: bold;
+   font-size: 14px;
+    resize: none;
+    width: 900px;
+    min-height: 300px;
+   
+    background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+    margin: 20px 70px 70px;
+    padding: 30px;
+    line-height:26px;
+   
+}
+
+.tape-options{
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.7px solid black;
+  
+}
+.tape-options span{
+    margin: 0 40px 0 0;
+    
+}
+
+.tape-items{
+   position: relative;
+   bottom: 50px;
+   display: flex;
+   justify-content: center;
+}
+
+.tape-items a{
+padding: 0 40px 0 0;
+}
+
+.edit-content button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+
+
+/* courses */
+
+.courses-list{
+   padding-left: 70px;
+   
+}
+.courses-list a {
+    color: rgb(87, 86, 86);
+    border-bottom: 1px solid black;
+}
+
+.course-code{
+    font-weight: bold;
+    font-size: 14px;
+     resize: none;
+     width: 900px;
+     min-height: 500px;
+      background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+     margin: 20px 70px 70px;
+     padding: 30px;
+     line-height:26px;
+}
+
+.course-content{
+    
+    padding: 20px;
+     background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);;
+}
+
+
+
+/* profile */
+
+.tape-title-for-profile{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.content-text-from-profile{
+    font-weight: bold;
+    font-size: 14px;
+     resize: none;
+     width: 900px;
+     min-height: 400px;
+      background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+     margin: 20px 70px 70px;
+     padding: 30px;
+     line-height:26px;
+}
+
+.prifile-avatar{
+    width: 330px;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.profile-pageandsetting{
+    height: 300px;
+    
+}
+
+.profile-setting{
+    height: 500px;
+}
+
+.profile-page-message{
+    font-size: 18px;
+    line-height:26px;
+    word-spacing: 9px;
+    padding: 30px;
+    
+    
+    color: rgb(102, 100, 100);
+}
+.profile-name-title{
+font-size: 22px;
+color: rgb(56, 56, 55);
+}
+.profile-name-title-des{
+    font-size: 22px;
+    color: rgb(56, 56, 55);
+}
+
+.folder-img{
+    width: 300px;
+}
+.card-content{
+     background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+   position: relative;
+   top: 50px;
+   height: 200px;
+   
+}
+.card-title{
+   padding: 10px;
+}
+
+.course-code-to-profile{
+    font-weight: bold;
+    font-size: 14px;
+     resize: none;
+     width: 900px;
+     min-height: 300px;
+      background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+     margin: 20px 70px 70px;
+     padding: 30px;
+     line-height:26px;
+}
+
+
+.profile-pate-photo{
+    width: 400px;
+}
+
+.profile-tape-info{
+    font-size: 18px;
+    line-height:26px;
+    word-spacing: 9px;
+    padding: 30px;
+    color: rgb(99, 99, 99)
+}
+
+.profile-tape-helper-text{
+    font-size: 14px;
+    line-height:20px;
+    word-spacing: 6px;
+    padding: 30px;
+    color: rgb(48, 47, 47);
+    border-radius: 5px;
+    background-color: goldenrod;
+}
+
+.profile-tape-info h3{
+background-color:goldenrod; ;
+}
+
+/* course-page -User*/
+.user-course-page button {
+position: relative;
+bottom: 50px;
+left: 45%;
+}
+
+
+/* code-editor */
+
+.contant-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: brown;
+}
+
+.info-block{
+    font-size: 18px;
+    line-height:26px;
+    word-spacing: 9px;
+    padding: 30px;
+    color: rgb(80, 78, 78);
+    border-radius: 5px;
+     background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+    margin: 10px;
+   
+
+}
+
+
+.code-edir-photos{
+    width: 300px;
+}
+
+
+/* all users pages */
+
+.all-users-photos{
+    width: 200px;
+    height: 180px;
+    padding: 30px;
+   border-radius: 10px;
+   margin: 10px;
+   background-color: #ccc9c3;
+}
+
+.userName{
+    font-size: 22px;
+    
+}
+
+/* error */
+.some-errors{
+    font-size: 22px;
+  color: red;
+    border-radius: 12px;
+    border-bottom: 3px solid red;
+    border-top: 3px solid red;
+}
+
+
+/* comments post */
+
+.comment-text{
+    width: 750px;
+    height: 200px;
+    background-color: whitesmoke;
+    resize: none;
+}
+
+.cuestions{
+
+  position: relative;
+  word-wrap: break-word;
+ 
+  font-size: 20px;
+ 
+}
+
+
+.bord{
+    border: 0.7px solid rgb(70, 69, 69);
+    /* width: 60px; */
+    height: 150px;
+    margin: 2px;
+    border-radius: 4px;
+     background-image: radial-gradient(circle 675px at center, #ffffff 10%, #f5efb8 100%);
+  
+}
+
+.bord p{
+    color: rgb(63, 53, 53);
+    
+}
+
+.bord:hover{
+    background-color: rgb(155, 145, 147);
+    transition: all 1s;
+}
+
+.border-position{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.post-info{
+    font-size: 20px;
+    line-height:28px;
+    word-spacing: 9px;
+    padding: 30px;
+    color: rgb(48, 47, 47);
+    border-radius: 5px;
+    background-color: goldenrod;
+}
+
+.content-post-title{
+    font-weight: bold;
+     resize: none;
+     width: 900px;
+     min-height: 450px;
+     max-height: max-content;
+     background-color: rgb(219, 215, 211);
+     margin: 20px 70px 70px;
+     padding: 30px;
+     line-height:26px;
+}
+
+.content-post-coment{
+        margin-left: 100px;
+        margin-top: 75px; /* для демонстрации */
+        position: relative;
+        width: 80%;
+        height: 20%;
+        background-color: rgb(204, 204, 204);
+        border: 1.7px solid black;
+        word-wrap: break-word;
+        padding: 5px; /* для демонстрации */
+   
+}
+
+.question-title{
+    font-size: 24px;
+   
+    color: rgb(48, 47, 47);
+    height: 50px;
+    padding-top: 10px;
+}
+
+
+.content-post-coment .autor{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* time-backgraund */
+
+.nite-mode{
+    width: 25px;
+    height: 25px;
+    background-color: #d60c0c;
+    position: fixed;
+    border-radius: 50%;
+    right: 80px;
+    bottom: 70px;
+    box-shadow: 0 0 5px 5px #a32323;
+    cursor: pointer;
+    transform: .50s;
+}
+
+.nite-mode:hover{
+    transform: scale(1.2);
+}
+
+/* .time-backgraund{
+    padding-top: 20px;
+    
+}
+
+.time-backgraund span{
+    background-color:rgb(170, 41, 41);
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 3px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.time-backgraund #dey{
+ margin-right: 40px;
+ 
+} */

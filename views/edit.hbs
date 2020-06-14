@@ -1,0 +1,31 @@
+ <div class="edit-content">
+ <form action="/tape/edit" method="POST">
+ 
+ <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input id="input_text" name="title" type="text" data-length="50" value="{{tape.title}}" required>
+            <label for="input_text">Наименование</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea" name="content" class="materialize-textarea" required>{{tape.content}}</textarea>
+            <label for="textarea">Тема</label>
+          </div>
+        </div>
+
+            <input type="hidden" name="id" value="{{tape._id}}">   
+        <button class="btn red" type="submit">изменить</button>
+      </form>
+    </div>
+ 
+ </form>
+
+ <form action="/tape/remove" method="post">
+  <input type="hidden" name="id" value="{{tape._id}}">   
+        <button class="btn red remove-btn" type="submit">удалить</button>
+ </form>
+
+ </div>
